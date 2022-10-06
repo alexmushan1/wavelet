@@ -24,7 +24,7 @@ class Handler implements URLHandler {
                 }
                 if (parameters[0].equals("s")) {
                     alist.add(parameters[1]);
-                    return "added"+parameters[1];
+                    return "added "+parameters[1];
                 }
             }
             else if (url.getPath().contains("/search")){
@@ -35,7 +35,7 @@ class Handler implements URLHandler {
                             blist.add(s);
                         }
                     }
-                    return String.format("result ",blist);
+                    return "result="+blist;
                 }
             }
             return "404 Not Found!";
