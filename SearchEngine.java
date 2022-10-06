@@ -24,6 +24,7 @@ class Handler implements URLHandler {
                 }
                 if (parameters[0].equals("s")) {
                     alist.add(parameters[1]);
+                    return "added";
                 }
             }
             else if (url.getPath().contains("/search")){
