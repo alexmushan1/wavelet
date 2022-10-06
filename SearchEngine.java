@@ -31,7 +31,7 @@ class Handler implements URLHandler {
                 String[] parameters = url.getQuery().split("=");
                 if (parameters[0].equals("s")) {
                     for (String s : alist){
-                        if (s.equals(parameters[1])){
+                        if (s.contains(parameters[1])){
                             blist.add(s);
                         }
                     }
