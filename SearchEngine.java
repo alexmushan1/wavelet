@@ -7,7 +7,7 @@ class Handler implements URLHandler {
     // various requests.
     int num = 0;
     ArrayList<String> alist = new ArrayList<String>();
-    ArrayList<String> blist = new ArrayList<String>();
+    
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
             return String.format("Number: %d", num);
@@ -28,6 +28,7 @@ class Handler implements URLHandler {
                 }
             }
             else if (url.getPath().contains("/search")){
+                ArrayList<String> blist = new ArrayList<String>();
                 String[] parameters = url.getQuery().split("=");
                 if (parameters[0].equals("s")) {
                     for (String s : alist){
